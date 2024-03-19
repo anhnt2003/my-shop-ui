@@ -1,16 +1,38 @@
 
+.background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../public/background.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;	
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
 .outerbox{
-    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
     margin: 0 auto;
-    margin-top: 2cm;
     width: 25cm;
     height: 15cm;
     border-radius: 10px;
 }
 
 .innerbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
-    margin-top: 0.5cm;
     background-color: rgb(240, 240, 240);
     padding: 10px;
     width: 24cm;
@@ -21,35 +43,67 @@
 
 .loginbox{
     background-color: white;
-    margin: auto;
-    width: 18cm;
+    width: 22cm;
     height: 12cm;
     box-shadow: 0px 0px 2.5px 0px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
 }
 
 h1{
-    text-align: left;
     text-transform: uppercase;
     color: black;
     margin-top: 30px;
-    margin-left: 30px;
+    margin-left: 80px;
+    margin-bottom: 20px;
     padding: 10px;
 }
 
 .image{
-    float: right;
-    margin-right: 10px;
+    margin-top: 70px;
+    flex: 1;
+    text-align: right;
+    width: 450px;
+    height: 300px;
 }
 
+.username{
+    margin-left: 20px;
+    margin-bottom: 25px;
+}
+
+.password{
+    margin-left: 20px;
+    margin-bottom: 25px;
+}
+
+
 .form-field{
+    flex: 1;
+    text-align: left;
     margin-bottom: 10px;
 }
 
-.p-float-label input, .p-float-label p-password{
-    width: 40%;
+
+.p-float-label input {
+    width: 97%;
 }
 
+
+.p-float-label p-password{
+    width: 100%;
+}
+
+.checkbox{
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+.button{
+    margin-left: 120px;
+}
+
+
 .form-container{
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
 }
