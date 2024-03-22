@@ -32,8 +32,11 @@
                                 </span>
                             </div>
 
-                            <p-checkbox class="checkbox" name="groupname" value="val1" label="Remember Me" [(ngModel)]="selectedValues"></p-checkbox>
-                            <br>
+                            <div class="inline-container">
+                                <p-checkbox class="checkbox" name="groupname" value="val1" label="Remember Me" [(ngModel)]="selectedValues"></p-checkbox>
+                                <p class="routelink"><a routerLink="/auth/signup">Don't have an account?</a></p>
+                            </div>
+
                             <p-button class="button" label="Login"></p-button>
 
                         </div>

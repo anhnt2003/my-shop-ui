@@ -73,7 +73,7 @@ h1{
 
 .password{
     margin-left: 20px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 
@@ -94,8 +94,9 @@ h1{
 }
 
 .checkbox{
-    margin-left: 20px;
-    margin-bottom: 30px;
+    margin-left: 15px;
+    // margin-bottom: 30px;
+    margin-right: 70px;
 }
 
 .button{
@@ -105,5 +106,11 @@ h1{
 
 .form-container{
     display: flex;
+    justify-content: space-between;
+}
+
+.inline-container{
+    display: flex;
+    align-items: center;
     justify-content: space-between;
 }
