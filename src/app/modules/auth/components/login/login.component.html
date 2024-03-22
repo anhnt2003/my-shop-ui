@@ -1,2 +1,50 @@
-<p>login works!</p>
-<h1>my - shop</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="login.component.scss">
+</head>
+
+
+<body>
+    <div class="background">
+        <div class="outerbox">
+            <div class="innerbox">
+                <div class="loginbox">
+                    <div class="form-container">                        
+                        <div class="form-field">
+
+                            <h1> Sign In </h1>
+
+                            <div class="username">
+                                <span class="p-float-label">
+                                    <input pInputText id="username" [(ngModel)]="username" />
+                                    <label for="username">Username</label>
+                                </span>
+                            </div>
+                            
+                            <div class="password">
+                                <span class="p-float-label">
+                                    <p-password [(ngModel)]="password" [feedback]="false" [toggleMask]="true"></p-password>
+                                    <label for="password">Password</label>
+                                </span>
+                            </div>
+
+                            <p-checkbox class="checkbox" name="groupname" value="val1" label="Remember Me" [(ngModel)]="selectedValues"></p-checkbox>
+                            <br>
+                            <p-button class="button" label="Login"></p-button>
+
+                        </div>
+
+                        <figure><img class="image" src="assets/public/avatar.jpg" alt="Image"></figure> 
+                        
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
