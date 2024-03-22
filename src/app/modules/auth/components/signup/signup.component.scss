@@ -1,0 +1,119 @@
+
+.background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../public/background.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;	
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.outerbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin: 0 auto;
+    width: 30cm;
+    height: 20cm;
+    border-radius: 10px;
+}
+
+.innerbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: rgb(240, 240, 240);
+    padding: 10px;
+    width: 29cm;
+    height: 19cm;
+    border-radius: 10px;
+}
+
+
+.loginbox{
+    background-color: white;
+    width: 28cm;
+    height: 17cm;
+    box-shadow: 0px 0px 2.5px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+h1{
+    text-transform: uppercase;
+    color: black;
+    margin-top: 30px;
+    margin-left: 150px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.image{
+    margin-top: 105px;
+    flex: 1;
+    background-color: rgb(133, 120, 120);
+    text-align: right;
+    width: 450px;
+    height: 300px;
+}
+
+.username{
+    margin-left: 35px;
+    margin-bottom: 25px;
+}
+
+.password{
+    margin-left: 35px;
+    margin-bottom: 25px;
+}
+
+
+.form-field{
+    flex: 1;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+
+.p-float-label input {
+    width: 100%;
+}
+
+
+
+.checkbox{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.button{
+    margin-top: 15px;
+    margin-left: 200px;
+}
+
+
+.form-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.inline-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.notification{
+    color: red;
+    margin-left: 20px;
+}
