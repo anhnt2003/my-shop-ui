@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="login.component.scss">
-</head>
-
+<link rel="stylesheet" href="login.component.scss">
 
 <body>
     <div class="background">
@@ -32,8 +24,11 @@
                                 </span>
                             </div>
 
-                            <p-checkbox class="checkbox" name="groupname" value="val1" label="Remember Me" [(ngModel)]="selectedValues"></p-checkbox>
-                            <br>
+                            <div class="inline-container">
+                                <p-checkbox class="checkbox" name="groupname" value="val1" label="Remember Me" [(ngModel)]="selectedValues"></p-checkbox>
+                                <p class="routelink"><a routerLink="/auth/signup">Don't have an account?</a></p>
+                            </div>
+
                             <p-button class="button" label="Login"></p-button>
 
                         </div>
@@ -47,4 +42,3 @@
     </div>
 
 </body>
-</html>

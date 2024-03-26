@@ -23,8 +23,8 @@
     align-items: center;
     background-color: white;
     margin: 0 auto;
-    width: 25cm;
-    height: 15cm;
+    width: 30cm;
+    height: 20cm;
     border-radius: 10px;
 }
 
@@ -35,16 +35,16 @@
     margin: 0 auto;
     background-color: rgb(240, 240, 240);
     padding: 10px;
-    width: 24cm;
-    height: 14cm;
+    width: 29cm;
+    height: 19cm;
     border-radius: 10px;
 }
 
 
 .loginbox{
     background-color: white;
-    width: 22cm;
-    height: 12cm;
+    width: 28cm;
+    height: 17cm;
     box-shadow: 0px 0px 2.5px 0px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
 }
@@ -53,27 +53,28 @@ h1{
     text-transform: uppercase;
     color: black;
     margin-top: 30px;
-    margin-left: 80px;
+    margin-left: 150px;
     margin-bottom: 20px;
     padding: 10px;
 }
 
 .image{
-    margin-top: 70px;
+    margin-top: 105px;
     flex: 1;
+    background-color: rgb(133, 120, 120);
     text-align: right;
     width: 450px;
     height: 300px;
 }
 
 .username{
-    margin-left: 20px;
+    margin-left: 35px;
     margin-bottom: 25px;
 }
 
 .password{
-    margin-left: 20px;
-    margin-bottom: 15px;
+    margin-left: 35px;
+    margin-bottom: 25px;
 }
 
 
@@ -85,22 +86,19 @@ h1{
 
 
 .p-float-label input {
-    width: 97%;
-}
-
-
-.p-float-label p-password{
     width: 100%;
 }
 
+
+
 .checkbox{
-    margin-left: 15px;
-    // margin-bottom: 30px;
-    margin-right: 70px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .button{
-    margin-left: 120px;
+    margin-top: 15px;
+    margin-left: 200px;
 }
 
 
@@ -113,4 +111,9 @@ h1{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.notification{
+    color: red;
+    margin-left: 20px;
 }

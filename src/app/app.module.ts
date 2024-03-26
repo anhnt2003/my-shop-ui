@@ -16,7 +16,7 @@ import { AppNavBarComponent } from './layouts/app-nav-bar/app-nav-bar.component'
     AppFooterComponent,
     AppHeaderComponent,
     AppMainComponent,
-    AppNavBarComponent
+    AppNavBarComponent,
   ],
   imports: [
     BrowserModule,
