@@ -4,7 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-app-main',
   templateUrl: './app-main.component.html',
   styleUrls: ['./app-main.component.scss']
+  
 })
 export class AppMainComponent {
-
+  public sidebarActive = false;
 }

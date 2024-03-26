@@ -1,8 +1,10 @@
-<div class="nav-bar">
-    <app-app-nav-bar></app-app-nav-bar>
-</div>
-<div class="content-main">
-    <app-app-header></app-app-header>
-    <router-outlet></router-outlet>
-    <app-app-footer></app-app-footer>
+<div id="container" [class.sidebarActive]="sidebarActive">
+    <app-side-bar></app-side-bar>
+    <div id="contentContainer">
+      <app-app-header (toggleSidebar)="sidebarActive= !sidebarActive" 
+      [sidebarActive]="sidebarActive"></app-app-header> 
+      <div id="content">Content
+        <router-outlet></router-outlet>
+      </div>
+    </div>
 </div>

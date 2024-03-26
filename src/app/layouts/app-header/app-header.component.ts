@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-app-header',
@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppHeaderComponent {
 
+  @Input() sidebarActive = false;
+  @Output() toggleSidebar = new EventEmitter();
 }

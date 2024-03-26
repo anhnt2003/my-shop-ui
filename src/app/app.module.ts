@@ -8,9 +8,9 @@ import { SharedModule } from './shared/shared.module';
 import { AppFooterComponent } from './layouts/app-footer/app-footer.component';
 import { AppHeaderComponent } from './layouts/app-header/app-header.component';
 import { AppMainComponent } from './layouts/app-main/app-main.component';
-import { AppNavBarComponent } from './layouts/app-nav-bar/app-nav-bar.component';
 import { GoogleLoginProvider, SocialAuthServiceConfig } from '@abacritt/angularx-social-login';
 import { environment } from 'src/environments/environment';
+import { SideBarComponent } from './layouts/side-bar/side-bar.component';
 
 @NgModule({
   declarations: [
@@ -18,14 +18,14 @@ import { environment } from 'src/environments/environment';
     AppFooterComponent,
     AppHeaderComponent,
     AppMainComponent,
-    AppNavBarComponent
+    SideBarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CoreModule,
     DataModule,
-    SharedModule
+    SharedModule,
   ],
   providers: [
     {
