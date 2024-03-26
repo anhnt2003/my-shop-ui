@@ -9,6 +9,8 @@ import { AppFooterComponent } from './layouts/app-footer/app-footer.component';
 import { AppHeaderComponent } from './layouts/app-header/app-header.component';
 import { AppMainComponent } from './layouts/app-main/app-main.component';
 import { AppNavBarComponent } from './layouts/app-nav-bar/app-nav-bar.component';
+import { GoogleLoginProvider, SocialAuthServiceConfig } from '@abacritt/angularx-social-login';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,23 @@ import { AppNavBarComponent } from './layouts/app-nav-bar/app-nav-bar.component'
     DataModule,
     SharedModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider(environment.gcpAuthClientId, { oneTapEnabled: false }),
+          },
+        ],
+        onError: (error) => {
+          console.log(error);
+        },
+      } as SocialAuthServiceConfig,
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

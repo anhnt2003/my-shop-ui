@@ -20,21 +20,23 @@
 
                             <div class="username">
                                 <span class="p-float-label">
-                                    <input pInputText id="username" [(ngModel)]="username" />
+                                    <input pInputText id="username"/>
                                     <label for="username">Username</label>
                                 </span>
                             </div>
                             
                             <div class="password">
                                 <span class="p-float-label">
-                                    <p-password [(ngModel)]="password" [feedback]="false" [toggleMask]="true"></p-password>
+                                    <p-password></p-password>
                                     <label for="password">Password</label>
                                 </span>
                             </div>
 
-                            <p-checkbox class="checkbox" name="groupname" value="val1" label="Remember Me" [(ngModel)]="selectedValues"></p-checkbox>
+                            <p-checkbox class="checkbox" name="groupname" value="val1" label="Remember Me"></p-checkbox>
                             <br>
                             <p-button class="button" label="Login"></p-button>
+                            <div>------------------Or------------------</div>
+                            <asl-google-signin-button type='standard' size='medium' width='300px'></asl-google-signin-button>
 
                         </div>
 
