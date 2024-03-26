@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DropdownModule } from 'primeng/dropdown';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ImageModule } from 'primeng/image';
 import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
@@ -11,7 +11,7 @@ import { CheckboxModule } from 'primeng/checkbox';
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule
+    CommonModule, FormsModule
   ],
   exports: [
     DropdownModule,
@@ -20,7 +20,8 @@ import { CheckboxModule } from 'primeng/checkbox';
     InputTextModule,
     PasswordModule,
     ButtonModule,
-    CheckboxModule
+    CheckboxModule,
+    ReactiveFormsModule
   ]
 })
 export class SharedModule { }

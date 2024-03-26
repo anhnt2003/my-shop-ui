@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="login.component.scss">
-
 <body>
     <div class="background">
         <div class="outerbox">
@@ -10,27 +8,28 @@
 
                             <h1> Sign In </h1>
 
-                            <div class="username">
-                                <span class="p-float-label">
-                                    <input pInputText id="username" [(ngModel)]="username" />
-                                    <label for="username">Username</label>
-                                </span>
-                            </div>
-                            
-                            <div class="password">
-                                <span class="p-float-label">
-                                    <p-password [(ngModel)]="password" [feedback]="false" [toggleMask]="true"></p-password>
-                                    <label for="password">Password</label>
-                                </span>
-                            </div>
+                            <form class="sign-in-form" [formGroup]="loginform" >
+                                <div class="username">
+                                    <span class="p-float-label">
+                                        <input pInputText id="username" formControlName="username" />
+                                        <label for="username">Username</label>
+                                    </span>
+                                </div>
+                                
+                                <div class="password">
+                                    <span class="p-float-label">
+                                        <p-password formControlName="password" [feedback]="false" [toggleMask]="true"></p-password>
+                                        <label for="password">Password</label>
+                                    </span>
+                                </div>
 
-                            <div class="inline-container">
-                                <p-checkbox class="checkbox" name="groupname" value="val1" label="Remember Me" [(ngModel)]="selectedValues"></p-checkbox>
-                                <p class="routelink"><a routerLink="/auth/signup">Don't have an account?</a></p>
-                            </div>
+                                <div class="inline-container">
+                                    <p-checkbox class="checkbox" name="groupname" value="val1" label="Remember Me" formControlName="rememberMe"></p-checkbox>
+                                    <p class="routelink"><a routerLink="/auth/signup">Don't have an account?</a></p>
+                                </div>
 
-                            <p-button class="button" label="Login"></p-button>
-
+                                <p-button class="button" label="Login"></p-button>
+                            </form>
                         </div>
 
                         <figure><img class="image" src="assets/public/avatar.jpg" alt="Image"></figure> 
@@ -40,5 +39,4 @@
             </div>
         </div>
     </div>
-
 </body>

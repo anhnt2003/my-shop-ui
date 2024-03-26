@@ -23,7 +23,7 @@ import { AppNavBarComponent } from './layouts/app-nav-bar/app-nav-bar.component'
     AppRoutingModule,
     CoreModule,
     DataModule,
-    SharedModule
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
