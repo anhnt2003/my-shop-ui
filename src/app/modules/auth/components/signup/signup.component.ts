@@ -7,12 +7,12 @@ import { Password } from 'primeng/password';
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent {
-  public username: any;
-  public selectedValues: any;
-  public firstname: any;
-  public lastname: any;
-  public createpassword: any;
-  public confirmpassword: any;
+  public username!: string;
+  public selectedValues!: boolean;
+  public firstname!: string;
+  public lastname!: string;
+  public createpassword!: string;
+  public confirmpassword!: string;
   passwordMismatch: boolean = false;
 
   @ViewChild('createPasswordInput') createPasswordInput: any;

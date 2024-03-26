@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  public username: any;
-  public password: any;
-  public selectedValues: any;
+  public username!: string;
+  public password!: string;
+  public selectedValues!: boolean;
 }
