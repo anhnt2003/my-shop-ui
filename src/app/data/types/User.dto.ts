@@ -1,19 +1,10 @@
 export interface UserDto{
-    username: string;
-    tickbox: boolean;
-    firstname: string;
-    lastname: string;
-    password: string;
-    createpassword: string;
-    confirmpassword: string;
+    username: '';
+    rememberMe: false;
+    agree: false;
+    firstname: '';
+    lastname: '';
+    password: '';
+    createpassword: '';
+    confirmpassword: '';
 }
-
-export const Constants: UserDto = {
-    username: '',
-    tickbox: false,
-    firstname: '',
-    lastname: '',
-    createpassword: '',
-    confirmpassword: '',
-    password: '',
-};

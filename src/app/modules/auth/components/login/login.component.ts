@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { Constants, UserDto } from 'src/app/data/types/User.dto';
+import { UserDto } from 'src/app/data/types/User.dto';
 
 @Component({
   selector: 'app-login',
@@ -9,15 +9,15 @@ import { Constants, UserDto } from 'src/app/data/types/User.dto';
 })
 export class LoginComponent implements OnInit {
 
-  user: UserDto = Constants;
+  user: UserDto | undefined;
 
   loginform: FormGroup;
 
   constructor(private fb: FormBuilder){
     this.loginform = this.fb.group({
-      username: '',
-      password: '',
-      rememberMe: false,
+      username: ['',Validators.required],
+      password: ['',Validators.required],
+      rememberMe: [false,Validators.required],
     });
   }  
 

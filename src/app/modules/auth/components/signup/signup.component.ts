@@ -1,6 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Constants, UserDto } from 'src/app/data/types/User.dto';
+import { UserDto } from 'src/app/data/types/User.dto';
 
 @Component({
   selector: 'app-signup',
@@ -8,9 +8,8 @@ import { Constants, UserDto } from 'src/app/data/types/User.dto';
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent implements OnInit{
-  user: UserDto = Constants;
+  user: UserDto | undefined;
   passwordMismatch: boolean = false;
-
 
   signupform: FormGroup;
 
@@ -22,21 +21,23 @@ export class SignupComponent implements OnInit{
       createpassword: ['',Validators.required],
       confirmpassword: ['',Validators.required],
       agree: [false, Validators.required],
-    });
+    }, {Validators: this.passwordMatchValidator});
   }  
 
   ngOnInit(): void {}
 
-  // @ViewChild('createPasswordInput') createPasswordInput: any;
+  passwordMatchValidator(passcheck: FormGroup){
+    const CreatePassword = passcheck.get('createpassword');
+    const ConfirmPassword = passcheck.get('confirmpassword');
 
-  // checkPasswordMatch(){
-  //   if(this.user.createpassword !== this.user.confirmpassword){
-  //     this.passwordMismatch = true;
+    if(CreatePassword && ConfirmPassword){
+      const Password1= CreatePassword.value;
+      const Password2 = ConfirmPassword.value;
 
-  //     this.createPasswordInput.nativeElement.focus();
-  //   }
-  //   else{
-  //     this.passwordMismatch = false;
-  //   }
-  // }
+      return Password1 === Password2 ? null : {passwordMismatch: true};
+
+    }
+    return null;
+  }
+
 }
