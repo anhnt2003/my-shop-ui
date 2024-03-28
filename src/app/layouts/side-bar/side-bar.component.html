@@ -1,15 +1,16 @@
-<div id="sidebar" >
-    <div class="logomyshop">
-
-
-    </div>
-      <div id="menu">
-        <a href="#">Dashboad</a>
-        <a href="#">Users</a>
-        <a href="#">Products</a>
-        <a href="#">Oders</a>
-        <a href="#">Setting
-
+<div class="nav-main hide" *ngIf="authService.authState| async as authContext">
+  <div class="nav-menu-icon">
+    <ul class="menu-item-list">
+      <li class="menu-item"  routerLinkActive="active">
+        <a href="javascript:void(0);" routerLink="/dashboard" attr-menu="dashboard">
+          <span>Tổng quan</span>
         </a>
-      </div>
+      </li>
+      <li class="menu-item"  routerLinkActive="active">
+        <a href="javascript:void(0);" routerLink="/products" attr-menu="products">
+          <span>Sản phẩm</span>
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>

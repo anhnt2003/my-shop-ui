@@ -25,7 +25,7 @@ import { SideBarComponent } from './layouts/side-bar/side-bar.component';
     AppRoutingModule,
     CoreModule,
     DataModule,
-    SharedModule,
+    SharedModule
   ],
   providers: [
     {
